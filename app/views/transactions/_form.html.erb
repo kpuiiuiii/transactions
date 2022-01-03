@@ -11,27 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field form-group ">
+    <%= form.text_field :name, class: "form-control", placeholder: "Transaction Name" %>
   </div>
 
-  <div class="field">
-    <%= form.label :classification %>
-    <%= form.text_field :classification %>
+  <div class="field form-group">
+    <%= form.text_field :classification, class: "form-control", placeholder: "Transaction Classification" %>
   </div>
 
-  <div class="field">
-    <%= form.label :date %>
+  <div class="field form-group">
+    <%= form.text_field :amount, class: "form-control", placeholder: "$ Amount" %>
+  </div>
+
+  <div class="field form-group">
     <%= form.date_select :date %>
   </div>
 
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.text_field :amount %>
-  </div>
 
-  <div class="actions">
+
+  <div class="actions form-group">
     <%= form.submit %>
   </div>
 <% end %>

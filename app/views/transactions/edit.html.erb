@@ -2,5 +2,9 @@
 
 <%= render 'form', transaction: @transaction %>
 
-<%= link_to 'Show', @transaction %> |
-<%= link_to 'Back', transactions_path %>
+
+<div class="d-grid gap-2 col-6 mx-auto">
+<%= link_to 'Show', @transaction, class:"btn btn-dark text-white"  %> 
+<%= link_to 'Back', transactions_path, class:"btn btn-dark text-white"  %>
+
+</div>
