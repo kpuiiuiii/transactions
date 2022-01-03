@@ -1,24 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @transaction.name %>
-</p>
+<table class="table table-dark table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Classification</th>
+      <th>Date</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Classification:</strong>
-  <%= @transaction.classification %>
-</p>
+  <tbody>
+      <tr>
+        <td><%= @transaction.name %></td>
+        <td><%= @transaction.classification %></td>
+        <td><%= @transaction.date %></td>
+        <td><%= @transaction.amount %></td>
+      </tr>
+  </tbody>
+</table>
 
-<p>
-  <strong>Date:</strong>
-  <%= @transaction.date %>
-</p>
 
-<p>
-  <strong>Amount:</strong>
-  <%= @transaction.amount %>
-</p>
+<div class="d-grid gap-2 col-5 mx-auto">
+<%= link_to 'Edit', edit_transaction_path(@transaction), class:"btn btn-dark text-white" %> 
+<%= link_to 'Back', transactions_path, class:"btn btn-dark text-white" %>
+</div>
 
-<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
-<%= link_to 'Back', transactions_path %>

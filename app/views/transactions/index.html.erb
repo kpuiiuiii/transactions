@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Transaction List</h1>
 
-<table>
+<table class="table table-dark table-striped table-hover">
   <thead>
     <tr>
       <th>Name</th>
@@ -20,14 +19,17 @@
         <td><%= transaction.classification %></td>
         <td><%= transaction.date %></td>
         <td><%= transaction.amount %></td>
-        <td><%= link_to 'Show', transaction %></td>
-        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
-        <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', transaction, class: "text-decoration-none text-reset" %></td>
+        <td><%= link_to 'Edit', edit_transaction_path(transaction), class: "text-decoration-none text-reset" %></td>
+        <td><%= link_to 'Destroy', transaction, class: "text-decoration-none text-reset", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<div class="d-grid gap-2 col-6 mx-auto">
 
-<%= link_to 'New Transaction', new_transaction_path %>
+  <%= link_to 'New Transaction', new_transaction_path, class:"btn btn-dark text-white" %>
+
+</div>
